@@ -88,7 +88,7 @@ public class BinomialHeap
 
 	public BinomialHeap(BinomialNode node)
 	{
-		this.head = new BinomialNode(-1);
+		this.head = new BinomialNode(-5);
 		this.head.sibling = node;
 		this.nodes = new HashMap<Integer, BinomialNode>();
 		this.nodes.put(node.getValue(), node);
