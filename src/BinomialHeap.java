@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * BinomialHeap
  *
@@ -6,6 +9,90 @@
  */
 public class BinomialHeap
 {
+	public class BinomialNode
+	{
+		private int value;
+		private BinomialNode parent;
+		private BinomialNode sibling;
+		private BinomialNode child;
+		private int rank;
+
+		public BinomialNode(int value)
+		{
+			this.value = value;
+			this.parent = null;
+			this.sibling = null;
+			this.child = null;
+			this.rank = 0;
+		}
+
+		public int getValue()
+		{
+			return value;
+		}
+
+		public void setValue(int value)
+		{
+			this.value = value;
+		}
+
+		public BinomialNode getParent()
+		{
+			return parent;
+		}
+
+		public void setParent(BinomialNode parent)
+		{
+			this.parent = parent;
+		}
+
+		public BinomialNode getSibling()
+		{
+			return sibling;
+		}
+
+		public void setSibling(BinomialNode sibling)
+		{
+			this.sibling = sibling;
+		}
+
+		public int getRank()
+		{
+			return rank;
+		}
+
+		public void setRank(int degree)
+		{
+			this.rank = degree;
+		}
+
+		public BinomialNode getChild()
+		{
+			return this.child;
+		}
+
+		public void setChild(BinomialNode child)
+		{
+			this.child = child;
+		}
+	}
+
+	private BinomialNode head;
+	private Map<Integer, BinomialNode> nodes;
+
+	public BinomialHeap()
+	{
+		this.head = new BinomialNode(-1);
+		this.nodes = new HashMap<Integer, BinomialNode>();
+	}
+
+	public BinomialHeap(BinomialNode node)
+	{
+		this.head = new BinomialNode(-1);
+		this.head.sibling = node;
+		this.nodes = new HashMap<Integer, BinomialNode>();
+		this.nodes.put(node.getValue(), node);
+	}
 
 	/**
 	 * public boolean empty()
@@ -17,7 +104,7 @@ public class BinomialHeap
 	 */
 	public boolean empty()
 	{
-		return false; // should be replaced by student code
+		return this.head.sibling == null;
 	}
 
 	/**
@@ -28,7 +115,8 @@ public class BinomialHeap
 	 */
 	public void insert(int value)
 	{
-		return; // should be replaced by student code
+		BinomialHeap H = new BinomialHeap(new BinomialNode(value));
+		this.meld(H);
 	}
 
 	/**
@@ -39,7 +127,7 @@ public class BinomialHeap
 	 */
 	public void deleteMin()
 	{
-		return; // should be replaced by student code
+		return; // TODO Implement this using the map
 
 	}
 
@@ -51,7 +139,7 @@ public class BinomialHeap
 	 */
 	public int findMin()
 	{
-		return 42;// should be replaced by student code
+		return 42; // TODO Implement this
 	}
 
 	/**
@@ -62,7 +150,7 @@ public class BinomialHeap
 	 */
 	public void meld(BinomialHeap heap2)
 	{
-		return; // should be replaced by student code
+		return; // TODO Implement this, don't forget about the map!
 	}
 
 	/**
@@ -73,7 +161,7 @@ public class BinomialHeap
 	 */
 	public int size()
 	{
-		return 42; // should be replaced by student code
+		return 42; // TODO Implement this
 	}
 
 	/**
@@ -84,7 +172,7 @@ public class BinomialHeap
 	 */
 	public int minTreeRank()
 	{
-		return 0; // to be replaced by student code
+		return this.head.getSibling().getRank();
 	}
 
 	/**
@@ -96,7 +184,7 @@ public class BinomialHeap
 	public boolean[] binaryRep()
 	{
 		boolean[] arr = new boolean[42];
-		return arr; // to be replaced by student code
+		return arr; // TODO Implement this
 	}
 
 	/**
@@ -107,7 +195,7 @@ public class BinomialHeap
 	 */
 	public void arrayToHeap(int[] array)
 	{
-		return; // to be replaced by student code
+		return; // TODO Implement this
 	}
 
 	/**
@@ -118,7 +206,7 @@ public class BinomialHeap
 	 */
 	public boolean isValid()
 	{
-		return false; // should be replaced by student code
+		return false; // TODO Implement this
 	}
 
 	/**
@@ -131,7 +219,7 @@ public class BinomialHeap
 	 */
 	public void delete(int value)
 	{
-		return; // should be replaced by student code
+		return; // TODO Implement this
 	}
 
 	/**
@@ -143,19 +231,8 @@ public class BinomialHeap
 	 */
 	public void decreaseKey(int oldValue, int newValue)
 	{
-		return; // should be replaced by student code
-	}
-
-	/**
-	 * public class HeapNode
-	 * 
-	 * If you wish to implement classes other than BinomialHeap (for example
-	 * HeapNode), do it in this file, not in another file
-	 * 
-	 */
-	public class HeapNode
-	{
-
+		return; // TODO Implement this, probably using a helper method that
+				// "bubles up problems"
 	}
 
 }
