@@ -383,8 +383,11 @@ public class BinomialHeap
 	 */
 	public void decreaseKey(int oldValue, int newValue)
 	{
+		if (!this.nodes.containsKey(oldValue) || oldValue == newValue)
+			return;
 		if (!this.nodes.containsKey(oldValue))
-			return; // TODO Implement this, probably using a helper method that
+			return; // TODO Implement non-trivial cases, probably using a helper
+					// method that
 					// "Bubbles up problems". Update the minimum value!
 	}
 
