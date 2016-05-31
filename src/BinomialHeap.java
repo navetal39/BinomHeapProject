@@ -1,5 +1,7 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;;
 
 /**
  * BinomialHeap
@@ -95,6 +97,25 @@ public class BinomialHeap
 			oldChild.setSibling(child);
 			this.child = child;
 			this.rank++;
+		}
+
+		public boolean isValidRoot()
+		{
+			if (this.getChild() == null)
+				return this.getRank() == 0;
+			HeapNode child = this.getChild().getSibling();
+			boolean[] seenRanks = new boolean[this.getRank()];
+			do
+			{
+				if (!child.isValidRoot() || child.getRank() >= this.getRank() || seenRanks[child.getRank()]
+						|| child.getValue() <= this.getValue())
+					return false;
+				seenRanks[child.getRank()] = true;
+			} while (child != this.getChild());
+			for (boolean seen : seenRanks)
+				if (!seen)
+					return false;
+			return true;
 		}
 	}
 
@@ -350,7 +371,16 @@ public class BinomialHeap
 	 */
 	public boolean isValid()
 	{
-		return false; // TODO Implement this
+		HeapNode node = this.head;
+		Set<Integer> seenRanks = new HashSet<Integer>();
+		while (node.getSibling() != null)
+		{
+			node = node.getSibling();
+			if (seenRanks.contains(node.getRank()) || !node.isValidRoot())
+				return false;
+			seenRanks.add(node.getRank());
+		}
+		return true;
 	}
 
 	/**
