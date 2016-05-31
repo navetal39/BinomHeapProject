@@ -383,12 +383,23 @@ public class BinomialHeap
 	 */
 	public void decreaseKey(int oldValue, int newValue)
 	{
-		if (!this.nodes.containsKey(oldValue) || oldValue == newValue)
+		if ((!this.nodes.containsKey(oldValue)) || oldValue == newValue)
 			return;
-		if (!this.nodes.containsKey(oldValue))
-			return; // TODO Implement non-trivial cases, probably using a helper
-					// method that
-					// "Bubbles up problems". Update the minimum value!
+		HeapNode problem = this.nodes.get(oldValue);
+		this.nodes.remove(oldValue);
+		problem.setValue(newValue);
+		this.nodes.put(newValue, problem);
+		while (problem.getParent() != null && problem.getValue() <= problem.getParent().getValue())
+		{
+			int parentValue = problem.getParent().getValue();
+			problem.getParent().setValue(newValue);
+			problem.setValue(parentValue);
+			this.nodes.remove(newValue);
+			this.nodes.remove(parentValue);
+			this.nodes.put(newValue, problem.getParent());
+			this.nodes.put(parentValue, problem);
+			problem = problem.getParent();
+		}
 	}
 
 }
