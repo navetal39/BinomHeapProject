@@ -63,9 +63,9 @@ public class BinomialHeap
 			return rank;
 		}
 
-		public void setRank(int degree)
+		public void setRank(int rank)
 		{
-			this.rank = degree;
+			this.rank = rank;
 		}
 
 		public HeapNode getChild()
@@ -149,7 +149,7 @@ public class BinomialHeap
 	 */
 	public boolean empty()
 	{
-		return this.head.sibling == null;
+		return this.head.sibling == this.head;
 	}
 
 	/**
@@ -175,7 +175,10 @@ public class BinomialHeap
 		HeapNode minNode = this.nodes.get(this.min), temp = minNode;
 		while (temp.getSibling() != minNode)
 			temp = temp.getSibling();
-		temp.setSibling(minNode.getSibling());
+		if (temp == minNode)
+			this.head.setSibling(this.head);
+		else
+			temp.setSibling(minNode.getSibling());
 		HeapNode newNodes = minNode.getChild().getSibling();
 		BinomialHeap newHeap = new BinomialHeap(newNodes);
 		this.meld(newHeap);
@@ -196,7 +199,11 @@ public class BinomialHeap
 
 	private void updateMin()
 	{
-
+		if (this.empty())
+		{
+			this.min = -1;
+			return;
+		}
 		HeapNode x = this.head.getSibling();
 		int m = x.getValue();
 		while (x.getSibling() != null)
@@ -216,6 +223,15 @@ public class BinomialHeap
 	 */
 	public void meld(BinomialHeap heap2)
 	{
+		if (heap2.empty())
+			return;
+		if (this.empty())
+		{
+			this.head = heap2.head;
+			this.nodes = heap2.nodes;
+			this.min = heap2.min;
+			return;
+		}
 		// Here we turn the circular list that connects the "forests" of each
 		// heap into a non-circular one, so it'l be easier to detect their ends:
 		HeapNode temp = this.head;
