@@ -9,15 +9,15 @@ import java.util.Map;
  */
 public class BinomialHeap
 {
-	public class BinomialNode
+	public class HeapNode
 	{
 		private int value;
-		private BinomialNode parent;
-		private BinomialNode sibling;
-		private BinomialNode child;
+		private HeapNode parent;
+		private HeapNode sibling;
+		private HeapNode child;
 		private int rank;
 
-		public BinomialNode(int value)
+		public HeapNode(int value)
 		{
 			this.value = value;
 			this.parent = null;
@@ -36,22 +36,22 @@ public class BinomialHeap
 			this.value = value;
 		}
 
-		public BinomialNode getParent()
+		public HeapNode getParent()
 		{
 			return parent;
 		}
 
-		public void setParent(BinomialNode parent)
+		public void setParent(HeapNode parent)
 		{
 			this.parent = parent;
 		}
 
-		public BinomialNode getSibling()
+		public HeapNode getSibling()
 		{
 			return sibling;
 		}
 
-		public void setSibling(BinomialNode sibling)
+		public void setSibling(HeapNode sibling)
 		{
 			this.sibling = sibling;
 		}
@@ -66,7 +66,7 @@ public class BinomialHeap
 			this.rank = degree;
 		}
 
-		public BinomialNode getChild()
+		public HeapNode getChild()
 		{
 			return this.child;
 		}
@@ -81,7 +81,7 @@ public class BinomialHeap
 		 * structure will break)
 		 * 
 		 */
-		public void addChild(BinomialNode child)
+		public void addChild(HeapNode child)
 		{
 			if (this.child == null)
 			{
@@ -90,7 +90,7 @@ public class BinomialHeap
 				this.rank++;
 				return;
 			}
-			BinomialNode oldChild = this.child;
+			HeapNode oldChild = this.child;
 			child.setSibling(oldChild.getSibling());
 			oldChild.setSibling(child);
 			this.child = child;
@@ -98,22 +98,22 @@ public class BinomialHeap
 		}
 	}
 
-	private BinomialNode head;
-	private Map<Integer, BinomialNode> nodes;
+	private HeapNode head;
+	private Map<Integer, HeapNode> nodes;
 	private int min;
 
 	public BinomialHeap()
 	{
-		this.head = new BinomialNode(-42);
-		this.nodes = new HashMap<Integer, BinomialNode>();
+		this.head = new HeapNode(-42);
+		this.nodes = new HashMap<Integer, HeapNode>();
 		this.min = -1;
 	}
 
-	public BinomialHeap(BinomialNode node)
+	public BinomialHeap(HeapNode node)
 	{
-		this.head = new BinomialNode(-42);
+		this.head = new HeapNode(-42);
 		this.head.sibling = node;
-		this.nodes = new HashMap<Integer, BinomialNode>();
+		this.nodes = new HashMap<Integer, HeapNode>();
 		this.nodes.put(node.getValue(), node);
 		this.min = node.getValue();
 	}
@@ -139,7 +139,7 @@ public class BinomialHeap
 	 */
 	public void insert(int value)
 	{
-		BinomialHeap h = new BinomialHeap(new BinomialNode(value));
+		BinomialHeap h = new BinomialHeap(new HeapNode(value));
 		this.meld(h);
 	}
 
@@ -151,11 +151,11 @@ public class BinomialHeap
 	 */
 	public void deleteMin()
 	{
-		BinomialNode minNode = this.nodes.get(this.min), temp = minNode;
+		HeapNode minNode = this.nodes.get(this.min), temp = minNode;
 		while (temp.getSibling() != minNode)
 			temp = temp.getSibling();
 		temp.setSibling(minNode.getSibling());
-		BinomialNode newNodes = minNode.getChild().getSibling();
+		HeapNode newNodes = minNode.getChild().getSibling();
 		BinomialHeap newHeap = new BinomialHeap(newNodes);
 		this.meld(newHeap);
 		this.nodes.remove(this.min);
@@ -176,7 +176,7 @@ public class BinomialHeap
 	private void updateMin()
 	{
 
-		BinomialNode x = this.head.getSibling();
+		HeapNode x = this.head.getSibling();
 		int m = x.getValue();
 		while (x.getSibling() != null)
 		{
@@ -197,7 +197,7 @@ public class BinomialHeap
 	{
 		// Here we turn the circular list that connects the "forests" of each
 		// heap into a non-circular one, so it'l be easier to detect their ends:
-		BinomialNode temp = this.head;
+		HeapNode temp = this.head;
 		do
 		{
 			temp = temp.getSibling();
@@ -210,11 +210,11 @@ public class BinomialHeap
 		} while (temp.getSibling() != heap2.head.getSibling());
 		temp.setSibling(null);
 
-		BinomialNode h1 = this.head, h2 = heap2.head.getSibling();
+		HeapNode h1 = this.head, h2 = heap2.head.getSibling();
 
 		while (h2 != null && h1.getSibling() != null)
 		{
-			BinomialNode next2 = h2.getSibling();
+			HeapNode next2 = h2.getSibling();
 			if (h1.getSibling().getRank() > h2.getRank()) // Add tree as it is
 			{
 				h2.setSibling(h1.getSibling());
@@ -229,7 +229,7 @@ public class BinomialHeap
 			if (h1.getSibling().getRank() == h2.getRank()) // We need to merge
 															// the trees!
 			{
-				BinomialNode lowerNode, higherNode;
+				HeapNode lowerNode, higherNode;
 				if (h1.getSibling().getValue() < h2.getValue())
 				{
 					lowerNode = h1.getSibling();
@@ -266,7 +266,7 @@ public class BinomialHeap
 										// stuff to add!
 			while (h2 != null)
 			{
-				BinomialNode next2 = h2.getSibling();
+				HeapNode next2 = h2.getSibling();
 				h2.setSibling(h1.getSibling());
 				h1.setSibling(h2);
 				h2 = next2;
@@ -318,7 +318,7 @@ public class BinomialHeap
 		{
 			return new boolean[0];
 		}
-		BinomialNode n = this.head.getSibling();
+		HeapNode n = this.head.getSibling();
 		while (n.getSibling() != this.head.getSibling())
 			n = n.getSibling();
 		boolean[] arr = new boolean[n.getRank() + 1];
@@ -334,7 +334,7 @@ public class BinomialHeap
 	/**
 	 * public void arrayToHeap()
 	 *
-	 * Insert the array to the heap. Delete previous elemnts in the heap.
+	 * Insert the array to the heap. Delete previous elements in the heap.
 	 * 
 	 */
 	public void arrayToHeap(int[] array)
