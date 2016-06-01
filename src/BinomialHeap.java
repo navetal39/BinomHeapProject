@@ -232,8 +232,10 @@ public class BinomialHeap
 			this.min = heap2.min;
 			return;
 		}
-		HeapNode node1 = this.decapitate().head.getSibling(), node2 = heap2.decapitate().head.getSibling(),
+		System.out.println("Takbir!");
+		HeapNode node1 = this.decapitate().getSibling(), node2 = heap2.decapitate().getSibling(),
 				newHead = new HeapNode(-42), newLast = newHead, carry = null;
+		System.out.println("allah uackbar!"); // TODO remove
 		while (node1 != null && node2 != null)
 		{
 			if (node1.getRank() < node2.getRank())
@@ -326,6 +328,7 @@ public class BinomialHeap
 			}
 		}
 		if (node1 == null && node2 == null)
+
 		{
 			if (carry != null)
 			{
@@ -334,6 +337,7 @@ public class BinomialHeap
 				carry = null;
 			}
 		} else
+
 		{
 			HeapNode remaining;
 			if (node1 != null)
@@ -378,6 +382,7 @@ public class BinomialHeap
 		this.head = newHead;
 		for (Integer key : heap2.nodes.keySet())
 			this.nodes.put(key, heap2.nodes.get(key));
+		this.min = Math.min(this.min, heap2.min);
 
 	}
 
@@ -405,9 +410,18 @@ public class BinomialHeap
 	 * private static HeapNode decapitate(BinomialHeap heap) breaks the loop at
 	 * the list of trees that makes up the heap and returns the head
 	 */
-	private BinomialHeap decapitate()
+	private HeapNode decapitate()
 	{
-		return this;
+		HeapNode temp = this.head;
+		if (!this.empty())
+		{
+			do
+			{
+				temp = temp.getSibling();
+			} while (temp.getSibling() != this.head.getSibling());
+		}
+		temp.setSibling(null);
+		return this.head;
 	}
 
 	/**
