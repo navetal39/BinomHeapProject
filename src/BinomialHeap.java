@@ -232,93 +232,182 @@ public class BinomialHeap
 			this.min = heap2.min;
 			return;
 		}
-		// Here we turn the circular list that connects the "forests" of each
-		// heap into a non-circular one, so it'l be easier to detect their ends:
-		HeapNode temp = this.head;
-		do
+		HeapNode node1 = this.decapitate().head.getSibling(), node2 = heap2.decapitate().head.getSibling(),
+				newHead = new HeapNode(-42), newLast = newHead, carry = null;
+		while (node1 != null && node2 != null)
 		{
-			temp = temp.getSibling();
-		} while (temp.getSibling() != this.head.getSibling());
-		temp.setSibling(null);
-		temp = heap2.head;
-		do
-		{
-			temp = temp.getSibling();
-		} while (temp.getSibling() != heap2.head.getSibling());
-		temp.setSibling(null);
-
-		HeapNode h1 = this.head, h2 = heap2.head.getSibling();
-
-		while (h2 != null && h1.getSibling() != null)
-		{
-			HeapNode next2 = h2.getSibling();
-			if (h1.getSibling().getRank() > h2.getRank()) // Add tree as it is
+			if (node1.getRank() < node2.getRank())
 			{
-				h2.setSibling(h1.getSibling());
-				h1.setSibling(h2);
-			}
-			if (h1.getSibling().getRank() < h2.getRank()) // We passed current
-															// tree's rank -
-															// check next one
-			{
-				h1 = h1.getSibling();
-			}
-			if (h1.getSibling().getRank() == h2.getRank()) // We need to merge
-															// the trees!
-			{
-				HeapNode lowerNode, higherNode;
-				if (h1.getSibling().getValue() < h2.getValue())
+				if (carry != null && carry.getRank() < node1.getRank())
+				// carry is smallest, add to new and reset.
 				{
-					lowerNode = h1.getSibling();
-					higherNode = h2;
-				} else
+					newLast.setSibling(carry);
+					newLast = newLast.getSibling();
+					carry = null;
+				}
+				if (carry == null || carry.getRank() > node1.getRank())
+				// node1 is smallest, add to new and advance.
 				{
-					lowerNode = h2;
-					higherNode = h1.getSibling();
+					HeapNode temp = node1.getSibling();
+					newLast.setSibling(node1);
+					newLast = newLast.getSibling();
+					node1 = temp;
 				}
-				lowerNode.setSibling(h1.getSibling().getSibling());
-				h1.setSibling(lowerNode);
-				lowerNode.addChild(higherNode);
-				while (h1.getSibling().getSibling() != null
-						&& h1.getSibling().getRank() == h1.getSibling().getSibling().getRank())
-				{ // The tree we created needs to be merged again
-					if (h1.getSibling().getValue() < h1.getSibling().getSibling().getValue())
-					{
-						lowerNode = h1.getSibling();
-						higherNode = h1.getSibling().getSibling();
-					} else
-					{
-						lowerNode = h1.getSibling().getSibling();
-						higherNode = h1.getSibling();
-					}
-					lowerNode.setSibling(h1.getSibling().getSibling().getSibling());
-					h1.setSibling(lowerNode);
-					lowerNode.addChild(higherNode);
+				if (carry != null && carry.getRank() == node1.getRank())
+				// node1 and carry are of equal ranks, merge and make new carry,
+				// then advance.
+				{
+					HeapNode temp = node1.getSibling();
+					carry = mergeTrees(node1, carry);
+					node1 = temp;
 				}
+				continue;
 			}
-			h2 = next2;
+			if (node1.getRank() > node2.getRank())
+			{
+				if (carry != null && carry.getRank() < node2.getRank())
+				// carry is smallest, add to new and reset.
+				{
+					newLast.setSibling(carry);
+					newLast = newLast.getSibling();
+					carry = null;
+				}
+				if (carry == null || carry.getRank() > node2.getRank())
+				// node2 is smallest, add to new and advance.
+				{
+					HeapNode temp = node2.getSibling();
+					newLast.setSibling(node2);
+					newLast = newLast.getSibling();
+					node2 = temp;
+				}
+				if (carry != null && carry.getRank() == node2.getRank())
+				// node2 and carry are of equal rank, merge and make new carry,
+				// then advance.
+				{
+					HeapNode temp = node2.getSibling();
+					carry = mergeTrees(node2, carry);
+					node2 = temp;
+				}
+				continue;
+			}
+			if (node1.getRank() == node2.getRank())
+			{
+				if (carry != null && carry.getRank() < node1.getRank())
+				// carry is smallest, add to new and reset (will merge in next
+				// iteration).
+				{
+					newLast.setSibling(carry);
+					newLast = newLast.getSibling();
+					carry = null;
+				}
+				if (carry != null && carry.getRank() == node1.getRank())
+				// all 3 are of equal rank, add node1 to new and merge the 2
+				// others, setting them to be the new carry, and finally
+				// advance.
+				{
+					HeapNode temp = node1.getSibling();
+					newLast.setSibling(node1);
+					node1 = temp;
+					temp = node2.getSibling();
+					carry = mergeTrees(node2, temp);
+					node2 = temp;
+				}
+				if (carry == null)
+				// carry doesn't worry us (it's impossible that it's rank will
+				// be higher than node1 and node2's, merge node1, node2, add the
+				// result to new then advance.
+				{
+					HeapNode temp1 = node1.getSibling(), temp2 = node2.getSibling();
+					carry = mergeTrees(node1, node2);
+					node1 = temp1;
+					node2 = temp2;
+				}
+				continue;
+			}
 		}
-		if (h1.getSibling() == null) // We finished because we reached the last
-										// tree in this heap, there is still
-										// stuff to add!
-			while (h2 != null)
-			{
-				HeapNode next2 = h2.getSibling();
-				h2.setSibling(h1.getSibling());
-				h1.setSibling(h2);
-				h2 = next2;
-			}
-		for (int key : heap2.nodes.keySet()) // Update nodes map:
+		if (node1 == null && node2 == null)
 		{
+			if (carry != null)
+			{
+				newLast.setSibling(carry);
+				newLast = newLast.getSibling();
+				carry = null;
+			}
+		} else
+		{
+			HeapNode remaining;
+			if (node1 != null)
+				remaining = node1;
+			else
+				remaining = node2;
+			while (remaining != null && carry != null)
+			{
+				if (remaining.getRank() < carry.getRank())
+				{
+					HeapNode temp = remaining.getSibling();
+					newLast.setSibling(remaining);
+					newLast = newLast.getSibling();
+					remaining = temp;
+				}
+				if (remaining.getRank() > carry.getRank())
+				{
+					newLast.setSibling(carry);
+					newLast = newLast.getSibling();
+					carry = null;
+				}
+				if (remaining.getRank() == carry.getRank())
+				{
+					HeapNode temp = remaining.getSibling();
+					carry = mergeTrees(carry, remaining);
+					remaining = temp;
+				}
+			}
+			if (carry != null)
+			{
+				newLast.setSibling(carry);
+				newLast = newLast.getSibling();
+			}
+			if (remaining != null)
+			{
+				newLast.setSibling(remaining);
+				while (newLast.getSibling() != null)
+					newLast = newLast.getSibling();
+			}
+		}
+		newLast.setSibling(newHead.getSibling());
+		this.head = newHead;
+		for (Integer key : heap2.nodes.keySet())
 			this.nodes.put(key, heap2.nodes.get(key));
-		}
-		// Finally, we turn the "forest" back into a circular list:
-		temp = this.head;
-		do
+
+	}
+
+	/**
+	 * private static HeapNode mergeTrees(HeapNode root1, HeapNode root2)
+	 * 
+	 * merges the 2 binomial trees who's roots are root1, root2 into 1 tree and
+	 * returns it's root. Assuming root1, root2 are of equal rank and diffrent
+	 * values.
+	 */
+	private static HeapNode mergeTrees(HeapNode root1, HeapNode root2)
+	{
+		if (root1.getValue() < root2.getValue())
 		{
-			temp = temp.getSibling();
-		} while (temp.getSibling() != null);
-		temp.setSibling(this.head.getSibling());
+			root1.addChild(root2);
+			return root1;
+		} else
+		{
+			root2.addChild(root1);
+			return root2;
+		}
+	}
+
+	/**
+	 * private static HeapNode decapitate(BinomialHeap heap) breaks the loop at
+	 * the list of trees that makes up the heap and returns the head
+	 */
+	private BinomialHeap decapitate()
+	{
+		return this;
 	}
 
 	/**
