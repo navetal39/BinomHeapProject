@@ -232,10 +232,10 @@ public class BinomialHeap
 			this.min = heap2.min;
 			return;
 		}
-		System.out.println("Takbir!");
+		// System.out.println("Takbir!"); // TODO remove
 		HeapNode node1 = this.decapitate().getSibling(), node2 = heap2.decapitate().getSibling(),
 				newHead = new HeapNode(-42), newLast = newHead, carry = null;
-		System.out.println("allah uackbar!"); // TODO remove
+		// System.out.println("allah uackbar!"); // TODO remove
 		while (node1 != null && node2 != null)
 		{
 			if (node1.getRank() < node2.getRank())
@@ -311,7 +311,7 @@ public class BinomialHeap
 					newLast.setSibling(node1);
 					node1 = temp;
 					temp = node2.getSibling();
-					carry = mergeTrees(node2, temp);
+					carry = mergeTrees(node2, carry);
 					node2 = temp;
 				}
 				if (carry == null)
@@ -352,18 +352,21 @@ public class BinomialHeap
 					newLast.setSibling(remaining);
 					newLast = newLast.getSibling();
 					remaining = temp;
+					continue;
 				}
 				if (remaining.getRank() > carry.getRank())
 				{
 					newLast.setSibling(carry);
 					newLast = newLast.getSibling();
 					carry = null;
+					continue;
 				}
 				if (remaining.getRank() == carry.getRank())
 				{
 					HeapNode temp = remaining.getSibling();
 					carry = mergeTrees(carry, remaining);
 					remaining = temp;
+					continue;
 				}
 			}
 			if (carry != null)
