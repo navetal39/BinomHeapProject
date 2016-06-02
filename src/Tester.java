@@ -8,7 +8,9 @@
  */
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -266,6 +268,14 @@ public class Tester
 			BinomialHeap heap2 = new BinomialHeap();
 			int[] vals1 = createValues(500);
 			int[] vals2 = createValues(500);
+
+			Set<Integer> s1 = new HashSet<Integer>(), s2 = new HashSet<Integer>();
+			for (int v : vals1)
+				s1.add(v);
+			for (int v : vals2)
+				if (s1.contains(v))
+					s2.add(v);
+
 			int min = vals1[0];
 			for (int v : vals1)
 			{
@@ -285,7 +295,7 @@ public class Tester
 			{
 				setFailed("result empty!");
 			}
-			if (heap1.size() != size1 + size2)
+			if (heap1.size() + s2.size() != size1 + size2)
 			{
 				setFailed("melded heap size (" + heap1.size() + ") != heap1 (" + size1 + ") + heap2 (" + size2 + ")");
 			}
