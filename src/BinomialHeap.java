@@ -185,8 +185,9 @@ public class BinomialHeap
 		HeapNode minNode = this.nodes.get(this.min);
         HeapNode temp = minNode;
 
-		while (temp.getSibling() != minNode)
-			temp = temp.getSibling();
+		while (temp.getSibling() != minNode) {
+            temp = temp.getSibling();
+        }
 		if (temp == minNode)
 			this.head.setSibling(this.head);
 		else
@@ -519,7 +520,12 @@ public class BinomialHeap
 	{
         // If the heap is empty.
         if(this.head.getSibling() == head){
-            return true;
+            if(head.getParent() == null && head.getSibling() == head &&
+                    head.getChild() == null){
+                return true;
+            }else{
+                return false;
+            }
         }
 
 		HeapNode first = this.head.getSibling();
@@ -527,10 +533,11 @@ public class BinomialHeap
 		Set<Integer> seenRanks = new HashSet<Integer>();
 		while (current.getSibling() != first)
 		{
-			current = current.getSibling();
 			if (seenRanks.contains(current.getRank()) || !current.isValidRoot())
 				return false;
 			seenRanks.add(current.getRank());
+
+            current = current.getSibling();
 		}
 		return true;
 	}
