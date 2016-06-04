@@ -85,6 +85,9 @@ public class BinomialHeap
 		 */
 		public void addChild(HeapNode child)
 		{
+            assert child != null;
+            assert this.rank == child.rank;
+
 			if (this.child == null)
 			{
 				this.child = child;
@@ -96,6 +99,7 @@ public class BinomialHeap
 			child.setSibling(oldChild.getSibling());
 			oldChild.setSibling(child);
 			this.child = child;
+			this.child.setParent(this);
 			this.rank++;
 		}
 
@@ -482,6 +486,12 @@ public class BinomialHeap
 	 */
 	public void arrayToHeap(int[] array)
 	{
+        // Resetting the current heap.
+        this.head = new HeapNode(-42);
+        this.nodes = new HashMap<Integer, HeapNode>();
+        this.min = -1;
+
+
 		return; // TODO Implement this
 	}
 

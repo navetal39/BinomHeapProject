@@ -721,7 +721,6 @@ public class Tester
 
 	public static void main(String[] argv)
 	{
-
 		ExecutorService executor = Executors.newSingleThreadExecutor();
 		Test[] tests = { new TestMeld1(), new TestMeld2(), new TestMeld3(), new TestMeld4(), new TestMeld5(),
 				new TestInsert(), new TestFindMin1(), new TestFindMin2(), new TestDeleteMin(), new TestEmpty(),
