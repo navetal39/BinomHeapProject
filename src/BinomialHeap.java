@@ -164,6 +164,8 @@ public class BinomialHeap
 	 */
 	public void insert(int value)
 	{
+        assert isValid();
+
 		BinomialHeap h = new BinomialHeap(new HeapNode(value));
 		this.meld(h);
 	}
@@ -176,7 +178,13 @@ public class BinomialHeap
 	 */
 	public void deleteMin()
 	{
-		HeapNode minNode = this.nodes.get(this.min), temp = minNode;
+        assert isValid();
+        assert this.min != -1;
+        assert this.nodes.get(this.min) != null;
+
+		HeapNode minNode = this.nodes.get(this.min);
+        HeapNode temp = minNode;
+
 		while (temp.getSibling() != minNode)
 			temp = temp.getSibling();
 		if (temp == minNode)
@@ -208,15 +216,18 @@ public class BinomialHeap
 			this.min = -1;
 			return;
 		}
-		HeapNode x = this.head.getSibling();
-		int m = x.getValue();
-		while (x.getSibling() != null)
+
+        HeapNode first = this.head.getSibling();
+        HeapNode current = first;
+
+		int min = current.getValue();
+		while (current.getSibling() != first)
 		{
-			x = x.getSibling();
-			if (x.getValue() < m)
-				m = x.getValue();
+			current = current.getSibling();
+			if (current.getValue() < min)
+				min = current.getValue();
 		}
-		this.min = m;
+		this.min = min;
 	}
 
 	/**
@@ -227,6 +238,9 @@ public class BinomialHeap
 	 */
 	public void meld(BinomialHeap heap2)
 	{
+        assert isValid();
+        assert heap2.isValid();
+
 		if (heap2.empty())
 			return;
 		if (this.empty())
@@ -503,14 +517,20 @@ public class BinomialHeap
 	 */
 	public boolean isValid()
 	{
-		HeapNode node = this.head;
+        // If the heap is empty.
+        if(this.head.getSibling() == head){
+            return true;
+        }
+
+		HeapNode first = this.head.getSibling();
+        HeapNode current = first;
 		Set<Integer> seenRanks = new HashSet<Integer>();
-		while (node.getSibling() != null)
+		while (current.getSibling() != first)
 		{
-			node = node.getSibling();
-			if (seenRanks.contains(node.getRank()) || !node.isValidRoot())
+			current = current.getSibling();
+			if (seenRanks.contains(current.getRank()) || !current.isValidRoot())
 				return false;
-			seenRanks.add(node.getRank());
+			seenRanks.add(current.getRank());
 		}
 		return true;
 	}

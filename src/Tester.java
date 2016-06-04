@@ -727,6 +727,7 @@ public class Tester
 				new TestIsValid(), new TestArrayToHeap1(), new TestArrayToHeap2(), new TestBinaryRep(),
 				new TestMinTreeRank() };
 
+		int failed = 0, i = 0;
 		for (Test test : tests)
 		{
 			try
@@ -737,7 +738,42 @@ public class Tester
 				test.setFailed("Timed out. Infinite loop");
 			} catch (Exception e)
 			{
-				System.out.println(e.getMessage());
+				e.printStackTrace();
+				System.exit(1);
+			}
+
+			if (test.failed())
+			{
+				++failed;
+			}
+			System.out.printf("Test %2d | " + test + "\n", ++i);
+		}
+		executor.shutdown();
+
+		System.out.println("Failed " + failed + " Out of " + tests.length + " tests");
+		System.out.printf("Grade:\n%.0f\n", 100 * (1 - (float) failed / tests.length));
+		System.exit(0);
+	}
+
+	public static void originalMainBeereh(String[] argv)
+	{
+		ExecutorService executor = Executors.newSingleThreadExecutor();
+		Test[] tests = { new TestMeld1(), new TestMeld2(), new TestMeld3(), new TestMeld4(), new TestMeld5(),
+				new TestInsert(), new TestFindMin1(), new TestFindMin2(), new TestDeleteMin(), new TestEmpty(),
+				new TestIsValid(), new TestArrayToHeap1(), new TestArrayToHeap2(), new TestBinaryRep(),
+				new TestMinTreeRank() };
+
+		for (Test test : tests)
+		{
+			try
+			{
+				executor.submit(test).get(5, TimeUnit.SECONDS);
+			} catch (TimeoutException e)
+			{
+				test.setFailed("Timed out. Infinite loop");
+			} catch (Exception e)
+			{
+				e.printStackTrace();
 				System.exit(1);
 			}
 		}
