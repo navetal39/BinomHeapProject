@@ -58,6 +58,8 @@ public class SegalTest
 
 		// System.out.println(heap1.map);
 		System.out.println(heap1);
+
+		System.out.println("finito");
 	}
 
 	private static int[] createValues(int n)
