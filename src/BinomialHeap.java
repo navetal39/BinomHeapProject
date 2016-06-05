@@ -149,7 +149,7 @@ public class BinomialHeap
 	 */
 	public boolean empty()
 	{
-		return this.head.sibling == this.head;
+		return this.nodes.isEmpty();
 	}
 
 	/**
@@ -172,18 +172,24 @@ public class BinomialHeap
 	 */
 	public void deleteMin()
 	{
-		HeapNode minNode = this.nodes.get(this.min), temp = minNode;
-		while (temp.getSibling() != minNode)
-			temp = temp.getSibling();
-		if (temp == minNode)
+		HeapNode minNode = this.nodes.get(this.min), leftToMin = minNode;
+		if (leftToMin == null)
+			System.out.println(this.nodes.containsKey(this.min) + " " + this.min);
+		while (leftToMin.getSibling() != minNode)
+			leftToMin = leftToMin.getSibling();
+		if (leftToMin == minNode)
 			this.head.setSibling(this.head);
 		else
-			temp.setSibling(minNode.getSibling());
+		{
+			leftToMin.setSibling(minNode.getSibling());
+			if (minNode == this.head.getSibling())
+				this.head.setSibling(minNode.getSibling());
+		}
 		HeapNode newNodes = minNode.getChild().getSibling();
 		BinomialHeap newHeap = new BinomialHeap(newNodes);
 		this.meld(newHeap);
 		this.nodes.remove(this.min);
-		updateMin();
+		this.updateMin();
 	}
 
 	/**
@@ -204,7 +210,7 @@ public class BinomialHeap
 			this.min = -1;
 			return;
 		}
-		HeapNode x = this.head.getSibling();
+		HeapNode x = this.decapitate().getSibling();
 		int m = x.getValue();
 		while (x.getSibling() != null)
 		{
@@ -212,7 +218,9 @@ public class BinomialHeap
 			if (x.getValue() < m)
 				m = x.getValue();
 		}
+		x.setSibling(this.head.getSibling());
 		this.min = m;
+		System.out.println("new min " + m);
 	}
 
 	/**
@@ -232,10 +240,8 @@ public class BinomialHeap
 			this.min = heap2.min;
 			return;
 		}
-		// System.out.println("Takbir!"); // TODO remove
 		HeapNode node1 = this.decapitate().getSibling(), node2 = heap2.decapitate().getSibling(),
 				newHead = new HeapNode(-42), newLast = newHead, carry = null;
-		// System.out.println("allah uackbar!"); // TODO remove
 		while (node1 != null && node2 != null)
 		{
 			if (node1.getRank() < node2.getRank())
@@ -482,7 +488,11 @@ public class BinomialHeap
 	 */
 	public void arrayToHeap(int[] array)
 	{
-		return; // TODO Implement this
+		this.nodes = new HashMap<Integer, HeapNode>();
+		this.head.setSibling(this.head);
+		this.min = -1;
+		for (int i : array)
+			this.insert(i);
 	}
 
 	/**

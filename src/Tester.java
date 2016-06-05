@@ -401,11 +401,13 @@ public class Tester
 			Arrays.sort(vals);
 			for (int v : vals)
 			{
+				System.out.print(v + "-");
 				if (heap1.findMin() != v)
 				{
 					setFailed("min is " + v + " but findMin() says " + heap1.findMin());
 					break;
 				}
+				System.out.println(v);
 				heap1.deleteMin();
 			}
 		}
