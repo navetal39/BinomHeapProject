@@ -127,7 +127,7 @@ public class BinomialHeap
 	}
 
 	private HeapNode head;
-	private Map<Integer, HeapNode> nodes;
+	Map<Integer, HeapNode> nodes;
 	private int min;
 
 	public BinomialHeap()
