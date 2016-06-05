@@ -426,6 +426,7 @@ public class Tester
 
 			for (int i = 10; i < 30; ++i)
 			{
+				System.out.println("i = " + i);
 				if (!heap1.empty())
 				{
 					setFailed("empty but empty() returns false");
@@ -438,7 +439,7 @@ public class Tester
 				}
 				for (int j = 0; j < i; ++j)
 				{
-					heap1.insert(i);
+					heap1.insert(j);
 					++size;
 					if (heap1.empty())
 					{
@@ -497,7 +498,7 @@ public class Tester
 				}
 				for (int j = 0; j < i; ++j)
 				{
-					heap1.insert(i);
+					heap1.insert(j);
 					++nInsert;
 					if (!heap1.isValid())
 					{
@@ -787,6 +788,7 @@ public class Tester
 				++failed;
 			}
 			System.out.printf("Test %2d | " + test + "\n", ++i);
+
 		}
 		System.out.println("Failed " + failed + " Out of " + tests.length + " tests");
 		System.out.printf("Grade:\n%.0f\n", 100 * (1 - (float) failed / tests.length));
