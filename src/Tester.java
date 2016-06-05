@@ -732,7 +732,7 @@ public class Tester
 		{
 			try
 			{
-				executor.submit(test).get(5, TimeUnit.SECONDS);
+				executor.submit(test).get(10, TimeUnit.SECONDS);
 			} catch (TimeoutException e)
 			{
 				test.setFailed("Timed out. Infinite loop");

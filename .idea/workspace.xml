@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47b0532b-439c-4f62-9577-07e495fe57f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinomialHeap.java" afterPath="$PROJECT_DIR$/src/BinomialHeap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tester.java" afterPath="$PROJECT_DIR$/src/Tester.java" />
     </list>
     <ignored path="BinomHeapProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state relative-caret-position="17">
+              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinomialHeap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BinomialHeap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinomialHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="533" column="34" selection-start-line="533" selection-start-column="34" selection-end-line="533" selection-end-column="34" />
+            <state relative-caret-position="238">
+              <caret line="634" column="0" selection-start-line="634" selection-start-column="0" selection-end-line="634" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#BinomialHeap#0" expanded="false" />
                 <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
@@ -49,6 +49,7 @@
                 <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
+                <element signature="method#BinomialHeap#2;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#empty#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#insert#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#insert#0;class#BinomialHeap#0" expanded="false" />
@@ -56,13 +57,17 @@
                 <element signature="method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#findMin#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#updateMin#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#7850#7914#0" expanded="false" />
+                <element signature="e#8970#9033#0" expanded="false" />
+                <element signature="e#9429#9491#0" expanded="false" />
+                <element signature="e#9781#9841#0" expanded="false" />
+                <element signature="e#10302#10364#0" expanded="false" />
                 <element signature="docComment;method#meld#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#meld#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="e#5588#5652#0" expanded="false" />
-                <element signature="e#6375#6438#0" expanded="false" />
-                <element signature="e#6702#6764#0" expanded="false" />
-                <element signature="e#6949#7009#0" expanded="false" />
-                <element signature="e#7308#7370#0" expanded="false" />
+                <element signature="method#binomialHeapMerge#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="method#better#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#decapitate#0;class#BinomialHeap#0" expanded="false" />
@@ -72,9 +77,8 @@
                 <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="e#11610#11619#0" expanded="true" />
+                <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
@@ -87,12 +91,14 @@
       <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="408" column="25" selection-start-line="408" selection-start-column="25" selection-end-line="408" selection-end-column="25" />
+            <state relative-caret-position="187">
+              <caret line="575" column="28" selection-start-line="575" selection-start-column="28" selection-end-line="575" selection-end-column="28" />
               <folding>
                 <element signature="method#createValues#0;class#Tester#0" expanded="false" />
                 <element signature="method#vals2str#0;class#Tester#0" expanded="false" />
+                <element signature="class#Test#0;class#Tester#0" expanded="false" />
                 <element signature="method#Test#0;class#Test#0;class#Tester#0" expanded="false" />
+                <element signature="method#run#0;class#Test#0;class#Tester#0" expanded="false" />
                 <element signature="method#setFailed#0;class#Test#0;class#Tester#0" expanded="false" />
                 <element signature="method#setFailed#1;class#Test#0;class#Tester#0" expanded="false" />
                 <element signature="e#2337#2393#0" expanded="false" />
@@ -103,22 +109,22 @@
                 <element signature="method#test#0;class#TestMeld2#0;class#Tester#0" expanded="false" />
                 <element signature="class#TestMeld3#0;class#Tester#0" expanded="false" />
                 <element signature="method#test#0;class#TestMeld3#0;class#Tester#0" expanded="false" />
-                <element signature="e#5320#5329#0" expanded="true" />
-                <element signature="e#5349#5358#0" expanded="true" />
+                <element signature="class#TestMeld4#0;class#Tester#0" expanded="false" />
+                <element signature="method#test#0;class#TestMeld4#0;class#Tester#0" expanded="false" />
+                <element signature="class#TestMeld5#0;class#Tester#0" expanded="false" />
+                <element signature="method#test#0;class#TestMeld5#0;class#Tester#0" expanded="false" />
                 <element signature="class#TestInsert#0;class#Tester#0" expanded="false" />
                 <element signature="method#test#0;class#TestInsert#0;class#Tester#0" expanded="false" />
                 <element signature="class#TestFindMin1#0;class#Tester#0" expanded="false" />
                 <element signature="method#test#0;class#TestFindMin1#0;class#Tester#0" expanded="false" />
                 <element signature="class#TestFindMin2#0;class#Tester#0" expanded="false" />
                 <element signature="method#test#0;class#TestFindMin2#0;class#Tester#0" expanded="false" />
+                <element signature="class#TestDeleteMin#0;class#Tester#0" expanded="false" />
+                <element signature="method#test#0;class#TestDeleteMin#0;class#Tester#0" expanded="false" />
                 <element signature="class#TestEmpty#0;class#Tester#0" expanded="false" />
                 <element signature="method#test#0;class#TestEmpty#0;class#Tester#0" expanded="false" />
                 <element signature="class#TestIsValid#0;class#Tester#0" expanded="false" />
                 <element signature="method#test#0;class#TestIsValid#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestArrayToHeap1#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestArrayToHeap1#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestArrayToHeap2#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestArrayToHeap2#0;class#Tester#0" expanded="false" />
                 <element signature="class#TestBinaryRep#0;class#Tester#0" expanded="false" />
                 <element signature="method#binaryArrayToNum#0;class#TestBinaryRep#0;class#Tester#0" expanded="false" />
                 <element signature="method#bin2str#0;class#TestBinaryRep#0;class#Tester#0" expanded="false" />
@@ -145,9 +151,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Tester.java" />
         <option value="$PROJECT_DIR$/src/BinomialHeap.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -182,6 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -217,7 +224,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -508,7 +514,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -547,25 +553,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Tester.java</url>
-          <line>401</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Tester.java</url>
-          <line>394</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="!isValid()" language="JAVA" custom="" />
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>536</line>
+          <line>163</line>
           <properties />
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="!isValid()" language="JAVA" custom="" />
+          <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
+          <line>210</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="!current.isValidRoot()" language="JAVA" custom="" />
+          <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
+          <line>659</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tester.java</url>
+          <line>424</line>
+          <properties />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -576,36 +591,73 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="527">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/BinomialHeap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;class#BinomialHeap#0" expanded="false" />
+            <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#BinomialHeap#2;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#empty#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#insert#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#insert#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#findMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#updateMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#7850#7914#0" expanded="false" />
+            <element signature="e#8970#9033#0" expanded="false" />
+            <element signature="e#9429#9491#0" expanded="false" />
+            <element signature="e#9781#9841#0" expanded="false" />
+            <element signature="e#10302#10364#0" expanded="false" />
+            <element signature="docComment;method#meld#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#meld#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#binomialHeapMerge#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#better#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#decapitate#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#decapitate#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#size#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="408" column="25" selection-start-line="408" selection-start-column="25" selection-end-line="408" selection-end-column="25" />
+        <state relative-caret-position="1258">
+          <caret line="269" column="22" selection-start-line="269" selection-start-column="22" selection-end-line="269" selection-end-column="22" />
           <folding>
             <element signature="method#createValues#0;class#Tester#0" expanded="false" />
             <element signature="method#vals2str#0;class#Tester#0" expanded="false" />
+            <element signature="class#Test#0;class#Tester#0" expanded="false" />
             <element signature="method#Test#0;class#Test#0;class#Tester#0" expanded="false" />
+            <element signature="method#run#0;class#Test#0;class#Tester#0" expanded="false" />
             <element signature="method#setFailed#0;class#Test#0;class#Tester#0" expanded="false" />
             <element signature="method#setFailed#1;class#Test#0;class#Tester#0" expanded="false" />
             <element signature="e#2337#2393#0" expanded="false" />
@@ -616,22 +668,102 @@
             <element signature="method#test#0;class#TestMeld2#0;class#Tester#0" expanded="false" />
             <element signature="class#TestMeld3#0;class#Tester#0" expanded="false" />
             <element signature="method#test#0;class#TestMeld3#0;class#Tester#0" expanded="false" />
-            <element signature="e#5320#5329#0" expanded="true" />
-            <element signature="e#5349#5358#0" expanded="true" />
+            <element signature="class#TestMeld4#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMeld4#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestMeld5#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMeld5#0;class#Tester#0" expanded="false" />
             <element signature="class#TestInsert#0;class#Tester#0" expanded="false" />
             <element signature="method#test#0;class#TestInsert#0;class#Tester#0" expanded="false" />
             <element signature="class#TestFindMin1#0;class#Tester#0" expanded="false" />
             <element signature="method#test#0;class#TestFindMin1#0;class#Tester#0" expanded="false" />
             <element signature="class#TestFindMin2#0;class#Tester#0" expanded="false" />
             <element signature="method#test#0;class#TestFindMin2#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestDeleteMin#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestDeleteMin#0;class#Tester#0" expanded="false" />
             <element signature="class#TestEmpty#0;class#Tester#0" expanded="false" />
             <element signature="method#test#0;class#TestEmpty#0;class#Tester#0" expanded="false" />
             <element signature="class#TestIsValid#0;class#Tester#0" expanded="false" />
             <element signature="method#test#0;class#TestIsValid#0;class#Tester#0" expanded="false" />
-            <element signature="class#TestArrayToHeap1#0;class#Tester#0" expanded="false" />
-            <element signature="method#test#0;class#TestArrayToHeap1#0;class#Tester#0" expanded="false" />
-            <element signature="class#TestArrayToHeap2#0;class#Tester#0" expanded="false" />
-            <element signature="method#test#0;class#TestArrayToHeap2#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestBinaryRep#0;class#Tester#0" expanded="false" />
+            <element signature="method#binaryArrayToNum#0;class#TestBinaryRep#0;class#Tester#0" expanded="false" />
+            <element signature="method#bin2str#0;class#TestBinaryRep#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestBinaryRep#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestMinTreeRank#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMinTreeRank#0;class#Tester#0" expanded="false" />
+            <element signature="method#main#0;class#Tester#0" expanded="false" />
+            <element signature="method#originalMainBeereh#0;class#Tester#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="575" column="28" selection-start-line="575" selection-start-column="28" selection-end-line="575" selection-end-column="28" />
+          <folding>
+            <element signature="method#createValues#0;class#Tester#0" expanded="false" />
+            <element signature="method#vals2str#0;class#Tester#0" expanded="false" />
+            <element signature="class#Test#0;class#Tester#0" expanded="false" />
+            <element signature="method#Test#0;class#Test#0;class#Tester#0" expanded="false" />
+            <element signature="method#run#0;class#Test#0;class#Tester#0" expanded="false" />
+            <element signature="method#setFailed#0;class#Test#0;class#Tester#0" expanded="false" />
+            <element signature="method#setFailed#1;class#Test#0;class#Tester#0" expanded="false" />
+            <element signature="e#2337#2393#0" expanded="false" />
+            <element signature="method#toString#0;class#Test#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestMeld1#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMeld1#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestMeld2#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMeld2#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestMeld3#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMeld3#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestMeld4#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMeld4#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestMeld5#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestMeld5#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestInsert#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestInsert#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestFindMin1#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestFindMin1#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestFindMin2#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestFindMin2#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestDeleteMin#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestDeleteMin#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestEmpty#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestEmpty#0;class#Tester#0" expanded="false" />
+            <element signature="class#TestIsValid#0;class#Tester#0" expanded="false" />
+            <element signature="method#test#0;class#TestIsValid#0;class#Tester#0" expanded="false" />
             <element signature="class#TestBinaryRep#0;class#Tester#0" expanded="false" />
             <element signature="method#binaryArrayToNum#0;class#TestBinaryRep#0;class#Tester#0" expanded="false" />
             <element signature="method#bin2str#0;class#TestBinaryRep#0;class#Tester#0" expanded="false" />
@@ -646,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinomialHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="533" column="34" selection-start-line="533" selection-start-column="34" selection-end-line="533" selection-end-column="34" />
+        <state relative-caret-position="238">
+          <caret line="634" column="0" selection-start-line="634" selection-start-column="0" selection-end-line="634" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#BinomialHeap#0" expanded="false" />
             <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
@@ -657,6 +789,7 @@
             <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#BinomialHeap#2;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#empty#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#insert#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#insert#0;class#BinomialHeap#0" expanded="false" />
@@ -664,13 +797,17 @@
             <element signature="method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#findMin#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#updateMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#7850#7914#0" expanded="false" />
+            <element signature="e#8970#9033#0" expanded="false" />
+            <element signature="e#9429#9491#0" expanded="false" />
+            <element signature="e#9781#9841#0" expanded="false" />
+            <element signature="e#10302#10364#0" expanded="false" />
             <element signature="docComment;method#meld#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#meld#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="e#5588#5652#0" expanded="false" />
-            <element signature="e#6375#6438#0" expanded="false" />
-            <element signature="e#6702#6764#0" expanded="false" />
-            <element signature="e#6949#7009#0" expanded="false" />
-            <element signature="e#7308#7370#0" expanded="false" />
+            <element signature="method#binomialHeapMerge#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#better#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#decapitate#0;class#BinomialHeap#0" expanded="false" />
@@ -680,22 +817,13 @@
             <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="e#11610#11619#0" expanded="true" />
+            <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
