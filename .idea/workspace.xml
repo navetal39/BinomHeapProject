@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47b0532b-439c-4f62-9577-07e495fe57f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinomialHeap.java" afterPath="$PROJECT_DIR$/src/BinomialHeap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SegalTest.java" afterPath="$PROJECT_DIR$/src/SegalTest.java" />
     </list>
     <ignored path="BinomHeapProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,47 +26,57 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+            <state relative-caret-position="102">
+              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinomialHeap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BinomialHeap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinomialHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
+            <state relative-caret-position="387">
+              <caret line="739" column="0" selection-start-line="739" selection-start-column="0" selection-end-line="739" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;field#child#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;field#rank#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#empty#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#insert#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="method#insert#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#9500#9579#0" expanded="false" />
+                <element signature="e#10265#10323#0" expanded="false" />
+                <element signature="e#10920#10992#0" expanded="false" />
                 <element signature="docComment;method#findMin#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;method#updateMin#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#updateMin#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="docComment;method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="e#8095#8159#0" expanded="false" />
-                <element signature="e#9215#9278#0" expanded="false" />
-                <element signature="e#9674#9736#0" expanded="false" />
-                <element signature="e#10026#10086#0" expanded="false" />
-                <element signature="e#10547#10609#0" expanded="false" />
                 <element signature="docComment;method#meld#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="method#meld#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="method#binomialHeapMerge#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="method#better#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="docComment;method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="docComment;method#decapitate#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="method#decapitate#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#13974#14048#0" expanded="false" />
+                <element signature="e#14242#14324#0" expanded="false" />
+                <element signature="e#15103#15166#0" expanded="false" />
+                <element signature="docComment;method#mergeRootLists#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#16812#16869#0" expanded="false" />
+                <element signature="e#17568#17641#0" expanded="false" />
+                <element signature="e#17772#17832#0" expanded="false" />
                 <element signature="docComment;method#size#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
@@ -77,8 +85,17 @@
                 <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#21111#21170#0" expanded="false" />
                 <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#22811#22878#0" expanded="false" />
                 <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#24179#24252#0" expanded="false" />
+                <element signature="e#24701#24783#0" expanded="false" />
+                <element signature="e#24980#25027#0" expanded="false" />
+                <marker date="1465221162933" expanded="false" signature="5718:5799" ph="/**...*/" />
+                <marker date="1465221162933" expanded="false" signature="5838:5942" ph="/**...*/" />
+                <marker date="1465221162933" expanded="false" signature="15856:18567" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -133,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SegalTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SegalTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SegalTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="296">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
               <folding>
                 <element signature="method#createValues#0;class#SegalTest#0" expanded="false" />
               </folding>
@@ -241,7 +258,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Tester">
+  <component name="RunManager" selected="Application.SegalTest">
     <configuration default="false" name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Tester" />
@@ -512,8 +529,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Tester" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SegalTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SegalTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -533,12 +550,21 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -586,46 +612,46 @@
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="!isValid()" language="JAVA" custom="" />
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>758</line>
+          <line>740</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="!current.isValidRoot()" language="JAVA" custom="" />
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>669</line>
+          <line>623</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="!current.isValidRoot()" language="JAVA" custom="" />
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>98</line>
+          <line>151</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>103</line>
+          <line>156</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>100</line>
+          <line>153</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>679</line>
+          <line>634</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="!isValid()" language="JAVA" custom="" />
           <url>file://$PROJECT_DIR$/src/BinomialHeap.java</url>
-          <line>218</line>
+          <line>329</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
@@ -636,7 +662,7 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="49" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -659,33 +685,43 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#child#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#rank#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
             <element signature="method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#empty#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#insert#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#insert#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#9500#9579#0" expanded="false" />
+            <element signature="e#10265#10323#0" expanded="false" />
+            <element signature="e#10920#10992#0" expanded="false" />
             <element signature="docComment;method#findMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#updateMin#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#updateMin#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="e#8095#8159#0" expanded="false" />
-            <element signature="e#9215#9278#0" expanded="false" />
-            <element signature="e#9674#9736#0" expanded="false" />
-            <element signature="e#10026#10086#0" expanded="false" />
-            <element signature="e#10547#10609#0" expanded="false" />
             <element signature="docComment;method#meld#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#meld#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#binomialHeapMerge#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#better#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#decapitate#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#decapitate#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#13974#14048#0" expanded="false" />
+            <element signature="e#14242#14324#0" expanded="false" />
+            <element signature="e#15103#15166#0" expanded="false" />
+            <element signature="docComment;method#mergeRootLists#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#16812#16869#0" expanded="false" />
+            <element signature="e#17568#17641#0" expanded="false" />
+            <element signature="e#17772#17832#0" expanded="false" />
             <element signature="docComment;method#size#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
@@ -694,8 +730,17 @@
             <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#21111#21170#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#22811#22878#0" expanded="false" />
             <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#24179#24252#0" expanded="false" />
+            <element signature="e#24701#24783#0" expanded="false" />
+            <element signature="e#24980#25027#0" expanded="false" />
+            <marker date="1465221162933" expanded="false" signature="5718:5799" ph="/**...*/" />
+            <marker date="1465221162933" expanded="false" signature="5838:5942" ph="/**...*/" />
+            <marker date="1465221162933" expanded="false" signature="15856:18567" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -818,47 +863,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SegalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <element signature="method#createValues#0;class#SegalTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+        <state relative-caret-position="102">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinomialHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
+        <state relative-caret-position="387">
+          <caret line="739" column="0" selection-start-line="739" selection-start-column="0" selection-end-line="739" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#child#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#rank#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#BinomialHeap#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
             <element signature="method#BinomialHeap#1;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#empty#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#insert#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#insert#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#deleteMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#9500#9579#0" expanded="false" />
+            <element signature="e#10265#10323#0" expanded="false" />
+            <element signature="e#10920#10992#0" expanded="false" />
             <element signature="docComment;method#findMin#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#updateMin#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#updateMin#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#meldmaf#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="e#8095#8159#0" expanded="false" />
-            <element signature="e#9215#9278#0" expanded="false" />
-            <element signature="e#9674#9736#0" expanded="false" />
-            <element signature="e#10026#10086#0" expanded="false" />
-            <element signature="e#10547#10609#0" expanded="false" />
             <element signature="docComment;method#meld#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#meld#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#binomialHeapMerge#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#better#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#mergeTrees#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#decapitate#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="method#decapitate#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#13974#14048#0" expanded="false" />
+            <element signature="e#14242#14324#0" expanded="false" />
+            <element signature="e#15103#15166#0" expanded="false" />
+            <element signature="docComment;method#mergeRootLists#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#16812#16869#0" expanded="false" />
+            <element signature="e#17568#17641#0" expanded="false" />
+            <element signature="e#17772#17832#0" expanded="false" />
             <element signature="docComment;method#size#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
@@ -867,18 +932,17 @@
             <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#21111#21170#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#22811#22878#0" expanded="false" />
             <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SegalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="method#createValues#0;class#SegalTest#0" expanded="false" />
+            <element signature="e#24179#24252#0" expanded="false" />
+            <element signature="e#24701#24783#0" expanded="false" />
+            <element signature="e#24980#25027#0" expanded="false" />
+            <marker date="1465221162933" expanded="false" signature="5718:5799" ph="/**...*/" />
+            <marker date="1465221162933" expanded="false" signature="5838:5942" ph="/**...*/" />
+            <marker date="1465221162933" expanded="false" signature="15856:18567" ph="{...}" />
           </folding>
         </state>
       </provider>
