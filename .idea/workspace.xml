@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47b0532b-439c-4f62-9577-07e495fe57f7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinomialHeap.java" afterPath="$PROJECT_DIR$/src/BinomialHeap.java" />
     </list>
     <ignored path="BinomHeapProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,25 +24,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BinomialHeap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinomialHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="750" column="6" selection-start-line="750" selection-start-column="6" selection-end-line="750" selection-end-column="6" />
+            <state relative-caret-position="51">
+              <caret line="144" column="37" selection-start-line="144" selection-start-column="37" selection-end-line="144" selection-end-column="37" />
               <folding>
                 <element signature="docComment;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
@@ -52,7 +41,6 @@
                 <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-                <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;field#nodes#0;class#BinomialHeap#0" expanded="false" />
@@ -88,79 +76,32 @@
                 <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="e#25552#25619#0" expanded="false" />
                 <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
                 <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
-              <folding>
-                <element signature="method#createValues#0;class#Tester#0" expanded="false" />
-                <element signature="method#vals2str#0;class#Tester#0" expanded="false" />
-                <element signature="class#Test#0;class#Tester#0" expanded="false" />
-                <element signature="method#Test#0;class#Test#0;class#Tester#0" expanded="false" />
-                <element signature="method#run#0;class#Test#0;class#Tester#0" expanded="false" />
-                <element signature="method#setFailed#0;class#Test#0;class#Tester#0" expanded="false" />
-                <element signature="method#setFailed#1;class#Test#0;class#Tester#0" expanded="false" />
-                <element signature="e#2337#2393#0" expanded="false" />
-                <element signature="method#toString#0;class#Test#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestMeld1#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestMeld1#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestMeld2#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestMeld2#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestMeld3#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestMeld3#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestMeld4#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestMeld4#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestMeld5#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestMeld5#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestInsert#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestInsert#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestFindMin1#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestFindMin1#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestFindMin2#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestFindMin2#0;class#Tester#0" expanded="false" />
-                <element signature="class#TestDeleteMin#0;class#Tester#0" expanded="false" />
-                <element signature="method#test#0;class#TestDeleteMin#0;class#Tester#0" expanded="false" />
-                <element signature="e#9362#9363#0" expanded="true" />
-                <element signature="e#9420#9421#0" expanded="true" />
-                <element signature="e#10451#10452#0" expanded="true" />
-                <element signature="e#10503#10504#0" expanded="true" />
-                <element signature="e#11081#11082#0" expanded="true" />
-                <element signature="e#11157#11158#0" expanded="true" />
-                <element signature="e#11849#11850#0" expanded="true" />
-                <element signature="e#11888#11889#0" expanded="true" />
-                <element signature="e#13727#13728#0" expanded="true" />
-                <element signature="e#13756#13757#0" expanded="true" />
-                <element signature="method#originalMainBeereh#0;class#Tester#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SegalTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SegalTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-              <folding>
-                <element signature="method#createValues#0;class#SegalTest#0" expanded="false" />
+                <element signature="e#27407#27474#0" expanded="false" />
+                <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+                <element signature="e#28871#28944#0" expanded="false" />
+                <element signature="e#29342#29424#0" expanded="false" />
+                <element signature="e#29621#29668#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -177,7 +118,19 @@
         <option value="$PROJECT_DIR$/src/Tester.java" />
         <option value="$PROJECT_DIR$/src/SegalTest.java" />
         <option value="$PROJECT_DIR$/src/BinomialHeap.java" />
+        <option value="$PROJECT_DIR$/no/src/BinHeap.java" />
+        <option value="$PROJECT_DIR$/no/src/BinomialHeap/BinomialHeap.java" />
+        <option value="$PROJECT_DIR$/no/src/BinomialHeap/Tester.java" />
+        <option value="$PROJECT_DIR$/no/src/Tester.java" />
+        <option value="$PROJECT_DIR$/no/src/BinomialHeap.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -256,7 +209,18 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.SegalTest">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\BinomHeapProject\no\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="BinomialHeap" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\BinomHeapProject\no\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Tester (2)">
     <configuration default="false" name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Tester" />
@@ -284,6 +248,41 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="BinomHeapProject" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Tester (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="BinomialHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="BinomialHeap.Tester" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="no" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Tester (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Tester" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="no" />
       <envs />
       <method />
     </configuration>
@@ -521,14 +520,18 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Tester" />
       <item index="1" class="java.lang.String" itemvalue="Application.SegalTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Tester (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Tester (2)" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.SegalTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Tester" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.Tester (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Tester (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SegalTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -562,30 +565,56 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36923078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36923078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36923078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -670,7 +699,6 @@
           <folding>
             <element signature="docComment;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
@@ -680,7 +708,6 @@
             <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#nodes#0;class#BinomialHeap#0" expanded="false" />
@@ -716,12 +743,19 @@
             <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="e#25552#25619#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#27407#27474#0" expanded="false" />
+            <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#28871#28944#0" expanded="false" />
+            <element signature="e#29342#29424#0" expanded="false" />
+            <element signature="e#29621#29668#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -798,7 +832,6 @@
           <folding>
             <element signature="docComment;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
@@ -808,7 +841,6 @@
             <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#nodes#0;class#BinomialHeap#0" expanded="false" />
@@ -844,12 +876,19 @@
             <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="e#25552#25619#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#27407#27474#0" expanded="false" />
+            <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#28871#28944#0" expanded="false" />
+            <element signature="e#29342#29424#0" expanded="false" />
+            <element signature="e#29621#29668#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -926,7 +965,6 @@
           <folding>
             <element signature="docComment;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
@@ -936,7 +974,6 @@
             <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#nodes#0;class#BinomialHeap#0" expanded="false" />
@@ -972,12 +1009,19 @@
             <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="e#25552#25619#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#27407#27474#0" expanded="false" />
+            <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#28871#28944#0" expanded="false" />
+            <element signature="e#29342#29424#0" expanded="false" />
+            <element signature="e#29621#29668#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1118,14 +1162,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/no/src/BinomialHeap/BinomialHeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no/src/BinomialHeap/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no/src/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="155" column="23" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no/src/BinomialHeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BinomialHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="750" column="6" selection-start-line="750" selection-start-column="6" selection-end-line="750" selection-end-column="6" />
+        <state relative-caret-position="51">
+          <caret line="144" column="37" selection-start-line="144" selection-start-column="37" selection-end-line="144" selection-end-column="37" />
           <folding>
             <element signature="docComment;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#value#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#parent#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#sibling#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
@@ -1135,7 +1210,6 @@
             <element signature="method#HeapNode#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#addChild#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
-            <element signature="docComment;method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValidRoot#0;class#HeapNode#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#head#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;field#nodes#0;class#BinomialHeap#0" expanded="false" />
@@ -1171,12 +1245,19 @@
             <element signature="docComment;method#minTreeRank#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#binaryRep#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="docComment;method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#arrayToHeap#0;class#BinomialHeap#0" expanded="false" />
             <element signature="docComment;method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#isValid#0;class#BinomialHeap#0" expanded="false" />
             <element signature="e#25552#25619#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#BinomialHeap#0" expanded="false" />
             <element signature="method#delete#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#27407#27474#0" expanded="false" />
+            <element signature="docComment;method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="method#decreaseKey#0;class#BinomialHeap#0" expanded="false" />
+            <element signature="e#28871#28944#0" expanded="false" />
+            <element signature="e#29342#29424#0" expanded="false" />
+            <element signature="e#29621#29668#0" expanded="false" />
           </folding>
         </state>
       </provider>
