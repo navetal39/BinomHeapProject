@@ -1,20 +1,25 @@
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;;
+import java.util.Set;
 
 /**
  * BinomialHeap
- * <p>
+ *
  * An implementation of binomial heap over non-negative integers. Based on
  * exercise from previous semester.
  *
- * For describing the complexity of its methods if not said otherwise we
- * denote by n the number of nodes/values in the heap. We usually don't
- * mention the trivial O(1) computations in the process of calculating
- * the complexity of the methods.
+ * A binomial heap is an implementation of a dynamic heap using a list of
+ * binomial trees of ranks representing the binary representation of the
+ * number of values (or nodes, because the trees can be represented as a graph)
+ * in the heap.
  *
- * Note that the terms key and values are identical in out context.
+ * For describing the complexity of the methods if not said otherwise
+ * we denote by n the number of nodes/values in the heap. We usually don’t
+ * mention the trivial O(1) computations in the process of calculating the
+ * complexity of the methods.
+ *
+ * Note that the terms key and value are identical in our context.
  */
 public class BinomialHeap {
     /**
@@ -163,11 +168,11 @@ public class BinomialHeap {
     /**
      * A sentinel heap node whose sibling the first node of the root list. (head himself is
      * not part of the root list). The root list is a cyclic list of the complete binomial
-     * trees that comprise the heap.
+     * trees that comprise the heap. see {@link HeapNode}'s documentation.
      */
     private HeapNode head;
     /**
-     * A map from the values of the nodes in this heap to themselves.
+     * A map from the values of the nodes in this heap to the nodes.
      */
     Map<Integer, HeapNode> nodes;
     /**
@@ -176,7 +181,7 @@ public class BinomialHeap {
     private int min;
 
     /**
-     * Instantiates an empty heap.
+     * Instantiates an empty binomial heap.
      */
     public BinomialHeap() {
         this.head = new HeapNode(-42);
@@ -185,7 +190,7 @@ public class BinomialHeap {
     }
 
     /**
-     * Instantiates a heap with a single node who has the given value
+     * Instantiates a new binomial heap with a single node who has the given value
      *
      * @param value
      */
@@ -199,8 +204,8 @@ public class BinomialHeap {
     }
 
     /**
-     * Instantiates a new heap with the given root list. All fields of the heap
-     * but the nodes field are set according to the given root list.
+     * Instantiates a new binomial heap with the given root list. All fields of the heap
+     * but the {@link #nodes} field are set according to the given root list.
      * The nodes map will only have one node - {@param rootList}.
      * All parents of the roots in {@param rootList} are nullified.
      * <p>
@@ -241,8 +246,9 @@ public class BinomialHeap {
      * public void insert(int value)
      * <p>
      * Insert value into the heap. The method inserts the given value by
-     * melding this with a single node heap with {@param value} as the value.
-     * Thus it runs in O(lg n).
+     * melding this with a single node heap with {@param value} as the node's value.
+     * Thus it runs in O(lg n). We learned in class that if we start with an empty
+     * binomial tree and commit n insert operations then the amortized time is O(1).
      *
      * @param value the value to be inserted.
      */
@@ -260,11 +266,21 @@ public class BinomialHeap {
     /**
      * public void deleteMin()
      * <p>
+     *
      * Delete the minimum value.
+     *
      * The method goes through the root list to find the node with the minimal
-     * value in O(lg n), creates a new heap with his O(lg n) children as the complete
-     * binomial trees in O(lg n), thus melds the heaps in O(lg n), and it calls
-     * {@link #updateMin()} which runs in O(lg n) resulting in O(lg n) time complexity.
+     * value which is a root to a complete binomial tree and deletes it.
+     * Then it creates a new heap with his O(lg n) children as the complete
+     * binomial trees and melds them to get a new almost valid binomial heap
+     * with all nodes but the node of the minimum. Then it updates the minimum
+     * field contain the new minimal value and make the heap valid.
+     *
+     * Going through the root list to find the node with the minimal value
+     * takes O(lg n). Then the method creates a new heap with his O(lg n) children
+     * as the complete binomial trees in O(lg n), because our heap also has O(lg n)
+     * long root list the melding takes O(lg n). Then the method calls {@link #updateMin()
+     * which runs in O(lg n) resulting in a total time complexity of O(lg n).
      */
     public void deleteMin() {
         if (this.empty()) {
@@ -319,8 +335,9 @@ public class BinomialHeap {
 
     /**
      * public int findMin()
-     * <p>
-     * Return the minimum value. runs in O(1).
+     *
+     * Return the minimum value (the value in the min field). If the heap is empty the
+     * method may return shtuyot. runs in O(1).
      */
     public int findMin() {
         return this.min;
@@ -329,6 +346,7 @@ public class BinomialHeap {
     /**
      * Go through the root list, find and update the minimum value.
      * The minimum value must be on the root list because of the heap property.
+     *
      * Going through the root list makes the method run in O(lg n).
      */
     private void updateMin() {
@@ -366,7 +384,46 @@ public class BinomialHeap {
      * calling {@link #mergeRootLists(BinomialHeap, BinomialHeap)} takes O(lg n) time.
      * The main loop in the method goes through the merged root list which will also be
      * of size O(lg n). So the resulting running time of meld is O(lg n).
-     * We ignore the O(n) time taken by uniting the nodes maps of this and heap2.
+     *
+     * Meld the current heap with heap2. In hebrew melding means uniting the heaps to get
+     * a bigger heap with their nodes. The method changes the current heap to be the union
+     * of the heaps. heap2 may be violated.
+     *
+     * If one of the heaps is empty the minimum is set to the other heap’s minimum.
+     * Otherwise it is set to be the minimum of the current heap and heap2’s min field value.
+     *
+     * When calling {@link #meld(BinomialHeap)} the nodes field of the current heap or
+     * heap2 may be invalid as long as the union of this.nodes and heap2.nodes is the set
+     * of nodes in both heaps (it is a map of the nodes in the union of the heaps).
+     *
+     * The method's algorithm:
+     * In order to unify the heaps we first merge the root list of the current heap and heap2
+     * to get a monotonically increasing (in terms of ranks) non cyclic list of their
+     * complete binomial trees. That list may contain up to 2 binomial trees of the same rank.
+     * We update the nodes map and the min field to contain valid value.
+     *
+     * Then we go through the merged root list.
+     * 1) If we have 2 differently ranked subsequent trees we are good and we continue.
+     * 2) If we have 3 subsequent same ranked trees we continue (may happen if we had 2
+     * pairs of subsequent same ranked trees with subsequent rank: for example 2 trees
+     * of rank 5 and 2 trees of rank 6 - by uniting the trees with rank 5 we get 3 trees
+     * with rank 6). After continuing the next case applies.
+     * 3) If we have exactly 2 subsequent same ranked binomial trees we unify them to get
+     * a tree with a rank higher by 1. We make the tree with the bigger root the child so
+     * we maintain the heap property.
+     * When we reach the last node in the merged root list we end that process.
+     *
+     * After that process we get a valid root list (The unique ranks of it are the determined
+     * by the binary representation of the size of the unified heap). We connect the last
+     * node in the merged root list to its first node to get a cyclic root list and finish.
+     *
+     * Assuming both heaps size is O(n), their root lists size is O(lg n) so calling
+     * {@link #mergeRootLists(BinomialHeap, BinomialHeap)} takes O(lg n) time. The main loop
+     * in the method goes through the merged root list which will also be of size O(lg n)
+     * and adding a child takes O(1). So the resulting running time of meld is O(lg n).
+     * We ignore the O(n) time taken by uniting the nodes maps of the current heap and heap2.
+     *
+     * @param heap2 The heap that will be unified into the current heap.
      */
     public void meld(BinomialHeap heap2) {
         // Merge the root lists.
@@ -430,12 +487,13 @@ public class BinomialHeap {
     }
 
     /**
-     * Merge the root lists of the given heaps to a monotonically increasing
-     * ranks. There may be up to 2 subsequent complete roots with the same rank.
-     * NOTE: The given heaps root list might be violated.
+     * Merge the root lists of the given heaps to a monotonically increasing in terms
+     * of ranks list. There may be up to 2 subsequent complete roots with the same
+     * rank in that list.
+     * NOTE: The given heaps’ root list might be violated.
      *
-     * Assuming both heaps size is O(n) their root lists size is O(lg n).
-     * The method runs through the root and thus takes O(lg n) time.
+     * Assuming both heaps size is O(n) their root lists size is O(lg n). The method runs
+     * through the root lists and thus takes O(lg n) time.
      *
      * @param h1
      * @param h2
@@ -520,27 +578,30 @@ public class BinomialHeap {
     }
 
     /**
-     * public int size()
-     * <p>
-     * Return the number of elements in the heap. runs in O(1).
+     * Returns the number of elements in the heap. We maintain the nodes' map to contain a
+     * mapping of the current nodes only, so we simply return its size. runs in O(1).
      */
     public int size() {
         return this.nodes.size();
     }
 
     /**
-     * public int minTreeRank()
-     * <p>
-     * Return the minimum rank of a tree in the heap. runs in O(1).
+     * Return the minimum rank of a complete binomial tree in the heap. The minimally ranked
+     * complete binomial tree is always the first one. runs in O(1).
      */
     public int minTreeRank() {
         return this.head.getSibling().getRank();
     }
 
     /**
-     * public boolean[] binaryRep()
-     * <p>
-     * Return an array containing the binary representation of the heap.
+     * Returns an array containing the binary representation of the heap.
+     * We create a boolean array of the size of the highest ranked binomial tree.
+     * Then we go through the root list and put true values in the indices
+     * pointed by the ranks of the complete binomial trees in it because the ranks
+     * of the complete binomial trees are exactly the binary representation of the heap.
+     *
+     * Running through the root list takes O(lg n) time so the method’s time
+     * complexity is O(lg n).
      */
     public boolean[] binaryRep() {
         if (this.empty()) {
@@ -559,9 +620,9 @@ public class BinomialHeap {
     }
 
     /**
-     * public void arrayToHeap()
-     * <p>
-     * Insert the array to the heap. Delete previous elements in the heap.
+     * Deletes previous elements in the heap. Inserts the array's values to the heap.
+     * When inserting n values to an empty binomial heap each insert operation
+     * takes O(1) amortized so the total cost is O(n).
      */
     public void arrayToHeap(int[] array) {
         // Resetting the current heap.
@@ -578,13 +639,21 @@ public class BinomialHeap {
      * <p>
      * Returns true if and only if the heap is valid.
      *
+     * The method goes through the root list:
+     * Checks that each complete root is an orphan (parent is null) valid binomial
+     * tree using {@link HeapNode#isValidRoot()}.
+     * Checks if the ranks of the complete binary trees fit the heap's size
+     * Checks the same rank doesn't show twice in the root list.
+     *
+     * Then the method checks minNode to be in the root list.
+     * If everything was ok the function returns true, else false.
+     *
      * In the main loop the method runs through the root list and calls
      * {@link HeapNode#isValidRoot()} on each complete root. Each call to
      * {@link HeapNode#isValidRoot()} on a complete root takes time linear to
-     * the number of nodes in the binomial tree rooted by it, so {@link #isValid}
+     * the number of nodes in the binomial tree rooted by it, so the method (isValid)
      * takes time linear to the number of nodes in the heap. We also go through
-     * the root list when validating min in O(lg n). Thus the method runs
-     * in O(n).
+     * the root list when validating min in O(lg n). The total cost of the method is O(n).
      *
      */
     public boolean isValid() {
@@ -601,8 +670,8 @@ public class BinomialHeap {
         HeapNode first = this.head.getSibling();
         HeapNode current = first;
         Set<Integer> seenRanks = new HashSet<Integer>();
-        // Check that each complete root is a valid binary tree and
-        // validate the ranks of the complete binary trees fit the heaps size
+        // Check that each complete root is an orphan valid binary tree and
+        // makes sure the ranks of the complete binary trees fit the heap's size
         // and that the same rank doesn't show twice.
         int size = 0;
         do {
@@ -639,12 +708,15 @@ public class BinomialHeap {
     /**
      * public void delete(int value)
      * <p>
-     * Delete the element with the given value from the heap, if such an element
+     * Deletes the element with the given value from the heap, if such an element
      * exists. If the heap doesn't contain an element with the given value, don't
      * change the heap.
      *
-     * The method calls {@link #deleteMin()} and {@link #decreaseKey(int, int)}
-     * which both run in O(lg n) so it runs in O(lg n) too.
+     * The method first decreases the key of the node with the given value (if needed)
+     * so it will be the minimum node and then uses deleteMin to delete it.
+     *
+     * Calling {@link #deleteMin()} and {@link #decreaseKey(int, int)}
+     * which both run in O(lg n) make the method run in O(lg n) too.
      *
      * @param value The value to be deleted or ignored if not in the heap.
      */
@@ -666,15 +738,17 @@ public class BinomialHeap {
     /**
      * public void decreaseKey(int oldValue, int newValue)
      * <p>
-     * If the heap doesn't contain an element with value oldValue, don't change
+     * If the heap doesn't contain an element with value {@param oldValue}, don't change
      * the heap. Otherwise decrease the value of the element whose value is
-     * oldValue to be newValue. Assume newValue <= oldValue. We update the min
+     * oldValue to be newValue. Assumes {@param newValue} <= {@param oldValue}. We update the min
      * field if necessary.
      *
-     * The method bubbles up the node with {@param oldValue} until the heap property
-     * is not violated by changing its value to {@param newValue}. That process
-     * takes time linear the height of the node's tree which is the rank of that
-     * tree which is O(lg n). Thus the method runs in O(lg n).
+     * The method "bubbles up the node" with {@param oldValue} until it doesn't violate the
+     * heap property. It does so by switching its value with its parent's value and
+     * updating the nodes map accordingly until the heap property is not violated by
+     * changing its value to{@param newValue}. That process takes time linear to the height
+     * of the node's tree which is the rank of that tree which is O(lg n).
+     * Thus the method runs in O(lg n).
      *
      * @param oldValue A value of a (real/imaginary) node in the heap that we will
      *                 decrease its key/value if real.
@@ -693,8 +767,8 @@ public class BinomialHeap {
         problem.setValue(newValue);
         this.nodes.put(newValue, problem);
 
-        // We go up out binomial tree until out node doesn't violate the heap property, or
-        // until we are the root which in the case the argument is trivially true.
+        // We go up our binomial tree until our node doesn't violate the heap property, or
+        // until we are the complete root and then the argument is trivially true.
         while (problem.getParent() != null && problem.getValue() < problem.getParent().getValue()) {
             // We switch our value with our parent's value.
             // Alternatively we bubble ourselves up.
