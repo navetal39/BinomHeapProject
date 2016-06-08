@@ -1,3 +1,10 @@
+
+/*
+ * Submitted by:
+ * navetal - 208518456
+ * amitbanay - 208520528
+ */
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -190,6 +197,7 @@ public class BinomialHeap
 		 */
 		public void addChild(HeapNode child)
 		{
+			OurTester.LINK_COUNT++;
 			assert child != null;
 			assert this.rank == child.rank;
 
@@ -209,7 +217,6 @@ public class BinomialHeap
 			this.child = child;
 			this.child.setParent(this);
 			this.rank++;
-			// OurTester.LINK_COUNT++;
 		}
 
 		/**
