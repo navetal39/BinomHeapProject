@@ -43,7 +43,7 @@ public class BinomialHeap
 		 */
 		private int value;
 		/**
-		 * The node's parent, null if it is a root of a binomial tree.
+		 * The node's parent, null if it is a root of a complete binomial tree.
 		 */
 		private HeapNode parent;
 		/**
@@ -209,6 +209,7 @@ public class BinomialHeap
 			this.child = child;
 			this.child.setParent(this);
 			this.rank++;
+			// OurTester.LINK_COUNT++;
 		}
 
 		/**
@@ -297,8 +298,9 @@ public class BinomialHeap
 	 * list. The nodes map will only have one node - {@param rootList}. All
 	 * parents of the roots in {@param rootList} are nullified.
 	 * <p>
-	 * Nullifying the root list takes O(lg n) if it has n nodes and
-	 * {@link #updateMin()} takes O(lg n) time so the method runs in O(lg n).
+	 * Nullifying the root list takes O(log(n)) if it has n nodes and
+	 * {@link #updateMin()} takes O(log(n)) time so the method runs in
+	 * O(log(n)).
 	 *
 	 * @param rootList
 	 *            A valid cyclic list of complete binomial trees with ascending
@@ -339,7 +341,7 @@ public class BinomialHeap
 	 * <p>
 	 * Insert value into the heap. The method inserts the given value by melding
 	 * this with a single node heap with {@param value} as the node's value.
-	 * Thus it runs in O(lg n). We learned in class that if we start with an
+	 * Thus it runs in O(log(n)). We learned in class that if we start with an
 	 * empty binomial tree and commit n insert operations then the amortized
 	 * time is O(1).
 	 *
@@ -368,17 +370,17 @@ public class BinomialHeap
 	 *
 	 * The method goes through the root list to find the node with the minimal
 	 * value which is a root to a complete binomial tree and deletes it. Then it
-	 * creates a new heap with his O(lg n) children as the complete binomial
+	 * creates a new heap with his O(log(n)) children as the complete binomial
 	 * trees and melds them to get a new almost valid binomial heap with all
 	 * nodes but the node of the minimum. Then it updates the minimum field
 	 * contain the new minimal value and make the heap valid.
 	 *
 	 * Going through the root list to find the node with the minimal value takes
-	 * O(lg n). Then the method creates a new heap with his O(lg n) children as
-	 * the complete binomial trees in O(lg n), because our heap also has O(lg n)
-	 * long root list the melding takes O(lg n). Then the method calls
-	 * {@link #updateMin() which runs in O(lg n) resulting in a total time
-	 * complexity of O(lg n).
+	 * O(log(n)). Then the method creates a new heap with his O(log(n)) children
+	 * as the complete binomial trees in O(log(n)), because our heap also has
+	 * O(log(n)) long root list the melding takes O(log(n)). Then the method
+	 * calls {@link #updateMin() which runs in O(log(n)) resulting in a total
+	 * time complexity of O(log(n)).
 	 */
 	public void deleteMin()
 	{
@@ -459,7 +461,7 @@ public class BinomialHeap
 	 * Go through the root list, find and update the minimum value. The minimum
 	 * value must be on the root list because of the heap property.
 	 *
-	 * Going through the root list makes the method run in O(lg n).
+	 * Going through the root list makes the method run in O(log(n)).
 	 */
 	private void updateMin()
 	{
@@ -498,11 +500,11 @@ public class BinomialHeap
 	 * this.nodes and heap2.nodes is the set of nodes in both heaps (nodes in
 	 * the union of the heaps).
 	 *
-	 * Assuming both heaps size is O(n), their root lists size is O(lg n) so
-	 * calling {@link #mergeRootLists(BinomialHeap, BinomialHeap)} takes O(lg n)
-	 * time. The main loop in the method goes through the merged root list which
-	 * will also be of size O(lg n). So the resulting running time of meld is
-	 * O(lg n).
+	 * Assuming both heaps size is O(n), their root lists size is O(log(n)) so
+	 * calling {@link #mergeRootLists(BinomialHeap, BinomialHeap)} takes
+	 * O(log(n)) time. The main loop in the method goes through the merged root
+	 * list which will also be of size O(log(n)). So the resulting running time
+	 * of meld is O(log(n)).
 	 *
 	 * Meld the current heap with heap2. In hebrew melding means uniting the
 	 * heaps to get a bigger heap with their nodes. The method changes the
@@ -539,12 +541,12 @@ public class BinomialHeap
 	 * heap). We connect the last node in the merged root list to its first node
 	 * to get a cyclic root list and finish.
 	 *
-	 * Assuming both heaps size is O(n), their root lists size is O(lg n) so
-	 * calling {@link #mergeRootLists(BinomialHeap, BinomialHeap)} takes O(lg n)
-	 * time. The main loop in the method goes through the merged root list which
-	 * will also be of size O(lg n) and adding a child takes O(1). So the
-	 * resulting running time of meld is O(lg n). We ignore the O(n) time taken
-	 * by uniting the nodes maps of the current heap and heap2.
+	 * Assuming both heaps size is O(n), their root lists size is O(log(n)) so
+	 * calling {@link #mergeRootLists(BinomialHeap, BinomialHeap)} takes
+	 * O(log(n)) time. The main loop in the method goes through the merged root
+	 * list which will also be of size O(log(n)) and adding a child takes O(1).
+	 * So the resulting running time of meld is O(log(n)). We ignore the O(n)
+	 * time taken by uniting the nodes maps of the current heap and heap2.
 	 *
 	 * @param heap2
 	 *            The heap that will be unified into the current heap.
@@ -631,8 +633,8 @@ public class BinomialHeap
 	 * the same rank in that list. NOTE: The given heaps’ root list might be
 	 * violated.
 	 *
-	 * Assuming both heaps size is O(n) their root lists size is O(lg n). The
-	 * method runs through the root lists and thus takes O(lg n) time.
+	 * Assuming both heaps size is O(n) their root lists size is O(log(n)). The
+	 * method runs through the root lists and thus takes O(log(n)) time.
 	 *
 	 * @param h1
 	 * @param h2
@@ -762,8 +764,8 @@ public class BinomialHeap
 	 * ranks of the complete binomial trees are exactly the binary
 	 * representation of the heap.
 	 *
-	 * Running through the root list takes O(lg n) time so the method’s time
-	 * complexity is O(lg n).
+	 * Running through the root list takes O(log(n)) time so the method’s time
+	 * complexity is O(log(n)).
 	 */
 	public boolean[] binaryRep()
 	{
@@ -819,7 +821,7 @@ public class BinomialHeap
 	 * {@link HeapNode#isValidRoot()} on a complete root takes time linear to
 	 * the number of nodes in the binomial tree rooted by it, so the method
 	 * (isValid) takes time linear to the number of nodes in the heap. We also
-	 * go through the root list when validating min in O(lg n). The total cost
+	 * go through the root list when validating min in O(log(n)). The total cost
 	 * of the method is O(n).
 	 *
 	 */
@@ -892,7 +894,7 @@ public class BinomialHeap
 	 * it.
 	 *
 	 * Calling {@link #deleteMin()} and {@link #decreaseKey(int, int)} which
-	 * both run in O(lg n) make the method run in O(lg n) too.
+	 * both run in O(log(n)) make the method run in O(log(n)) too.
 	 *
 	 * @param value
 	 *            The value to be deleted or ignored if not in the heap.
@@ -929,7 +931,7 @@ public class BinomialHeap
 	 * parent's value and updating the nodes map accordingly until the heap
 	 * property is not violated by changing its value to{@param newValue}. That
 	 * process takes time linear to the height of the node's tree which is the
-	 * rank of that tree which is O(lg n). Thus the method runs in O(lg n).
+	 * rank of that tree which is O(log(n)). Thus the method runs in O(log(n)).
 	 *
 	 * @param oldValue
 	 *            A value of a (real/imaginary) node in the heap that we will
