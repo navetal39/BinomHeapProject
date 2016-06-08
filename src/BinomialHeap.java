@@ -112,9 +112,6 @@ public class BinomialHeap {
          * @param child A non null HeapNode whose rank is the same as this.
          */
         public void addChild(HeapNode child) {
-            assert child != null;
-            assert this.rank == child.rank;
-
             if (this.child == null) {
                 this.child = child;
                 this.child.setParent(this);
@@ -250,9 +247,6 @@ public class BinomialHeap {
      * @param value the value to be inserted.
      */
     public void insert(int value) {
-        assert isValid();
-        assert this.min != -1 || this.empty();
-
         // If value is already in the heap.
         if (this.nodes.get(value) != null) {
             return;
@@ -261,8 +255,6 @@ public class BinomialHeap {
         // Insert the value to the heap by melding with a single node heap with the value.
         BinomialHeap h = new BinomialHeap(value);
         this.meld(h);
-
-        assert isValid() : String.format("%s %s %s %s", value, this.min, this.size(), this.empty());
     }
 
     /**
@@ -275,9 +267,6 @@ public class BinomialHeap {
      * {@link #updateMin()} which runs in O(lg n) resulting in O(lg n) time complexity.
      */
     public void deleteMin() {
-        assert isValid();
-        assert this.nodes.get(this.min) != null || this.empty();
-
         if (this.empty()) {
             return;
         }
@@ -326,8 +315,6 @@ public class BinomialHeap {
             this.meld(newHeap);
         }
         updateMin();
-
-        assert isValid();
     }
 
     /**
@@ -662,8 +649,6 @@ public class BinomialHeap {
      * @param value The value to be deleted or ignored if not in the heap.
      */
     public void delete(int value) {
-        assert isValid();
-
         if (!this.nodes.containsKey(value)) {
             return;
         }
@@ -676,8 +661,6 @@ public class BinomialHeap {
             this.decreaseKey(value, -1);
             this.deleteMin();
         }
-
-        assert isValid();
     }
 
     /**
@@ -698,16 +681,11 @@ public class BinomialHeap {
      * @param newValue The new value to be assigned. must be smaller then {@param oldValue}
      */
     public void decreaseKey(int oldValue, int newValue) {
-        assert isValid();
-        assert newValue <= oldValue;
-
         // If there is no node with the given value in the heap or the values are
         // identical we return.
         if ((!this.nodes.containsKey(oldValue)) || oldValue == newValue) {
             return;
         }
-
-        assert !this.nodes.containsKey(newValue);
 
         HeapNode problem = this.nodes.get(oldValue);
         // We decrease the node's value, and updating the nodes map accordingly.
@@ -737,8 +715,6 @@ public class BinomialHeap {
         if (newValue < this.min) {
             this.min = newValue;
         }
-
-        assert isValid() : String.format("oldValue: %s, newValue: %s", oldValue, newValue);
     }
 
 }
