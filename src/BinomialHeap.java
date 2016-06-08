@@ -73,46 +73,96 @@ public class BinomialHeap
 			this.rank = 0;
 		}
 
+		/**
+		 * Returns the vaue of this node.
+		 * 
+		 * @return value of the node
+		 */
 		public int getValue()
 		{
 			return value;
 		}
 
+		/**
+		 * Sets the value of the node to the input value.
+		 * 
+		 * @param value
+		 */
 		public void setValue(int value)
 		{
 			this.value = value;
 		}
 
+		/**
+		 * Returns the parent of the node
+		 * 
+		 * @return node's parent
+		 */
 		public HeapNode getParent()
 		{
 			return parent;
 		}
 
+		/**
+		 * Sets the parent of the node to be the input node.
+		 * 
+		 * @param parent
+		 */
 		public void setParent(HeapNode parent)
 		{
 			this.parent = parent;
 		}
 
+		/**
+		 * Returns the immediate sibling of the node (only the one this node
+		 * points to, not the other ones in the chain)
+		 * 
+		 * @return This nodes immediate sibling.
+		 */
 		public HeapNode getSibling()
 		{
 			return sibling;
 		}
 
+		/**
+		 * Sets the immediate sibling of this node to be the input node.
+		 * 
+		 * @param sibling
+		 */
 		public void setSibling(HeapNode sibling)
 		{
 			this.sibling = sibling;
 		}
 
+		/**
+		 * Returns the rank of the node (the rank of the binomial tree which
+		 * this node's the root of.
+		 * 
+		 * @return This node's rank.
+		 */
 		public int getRank()
 		{
 			return rank;
 		}
 
+		/**
+		 * Sets the rank of this node to be the input rank. Does not actually
+		 * change the tree which this node's the root of, only the numerical
+		 * value.
+		 * 
+		 * @param rank
+		 */
 		public void setRank(int rank)
 		{
 			this.rank = rank;
 		}
 
+		/**
+		 * Returns the immediate child of this node (That is, the node which
+		 * this node points to as a child, not this child's siblings.)
+		 * 
+		 * @return The node this node points to as a child.
+		 */
 		public HeapNode getChild()
 		{
 			return this.child;
